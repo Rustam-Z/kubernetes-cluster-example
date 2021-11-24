@@ -23,13 +23,16 @@
     kubectl get all
 
 <img src="img/2.png" alt="">
+
 <br> If you have output with "No resources found in default namespace." Then you need to execute the following, and try above commands again:
+
+```cmd
+$ kubectl apply -f mongo-config.yaml
+$ kubectl apply -f mongo-secret.yaml
+$ kubectl apply -f mongo.yaml
+$ kubectl apply -f webapp.yaml
 ```
-kubectl apply -f mongo-config.yaml
-kubectl apply -f mongo-secret.yaml
-kubectl apply -f mongo.yaml
-kubectl apply -f webapp.yaml
-```
+
 ### get extended info about components
     kubectl get pod -o wide
     kubectl get node -o wide
